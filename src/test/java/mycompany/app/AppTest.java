@@ -47,7 +47,7 @@ public class AppTest
 		//get web page
 		driver.get(url);
 		//wait until page is loaded or timeout error
-		wait.until(ExpectedConditions.titleContains("Login Page |")); 
+		wait.until(ExpectedConditions.titleContains("Login Page | PHP Login and logout example with session "));
 
 		//enter input
 		driver.findElement(By.name("email")).sendKeys(validEmail);
