@@ -8,6 +8,7 @@ pipeline {
                     steps {
                         bat 'jenkins\\scripts\\deploy.bat'
                         input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                        bat 'jenkins\\scripts\\kill.bat'
                     }
                 }
                 stage('Headless Browser Test') {
@@ -23,11 +24,6 @@ pipeline {
                     }
                 }
             }
-        }
-    }
-    post {
-        always {
-            bat 'jenkins\\scripts\\kill.bat'
         }
     }
 }
