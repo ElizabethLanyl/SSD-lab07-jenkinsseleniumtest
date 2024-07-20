@@ -1,13 +1,12 @@
 @echo off
-echo Deploying the application...
+echo Starting deployment...
 
-:: Start the Apache server
-:: Note: You need to have Apache installed and configured to serve the directory where your PHP application is located.
-:: Replace `C:\path\to\your\php\application` with the actual path to your PHP application
-start "" "C:\path\to\apache\bin\httpd.exe"
+REM Start Apache server on localhost using XAMPP
+"C:\xampp\xampp_start.exe"
 
-timeout /t 1 /nobreak >nul
+REM Copy project files to htdocs
+xcopy /E /I /Y C:\xampp\htdocs\jenkins-php-selenium-test
 
-echo Now...
-echo Visit http://localhost to see your PHP application in action.
+echo Deployment completed.
+echo Visit
 

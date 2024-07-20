@@ -1,9 +1,11 @@
 @echo off
-echo Stopping the application...
+echo Stopping and removing the application...
 
-:: Stop the Apache server
-:: Note: You need to have Apache installed and configured properly
-:: The following assumes `httpd.exe` is the Apache executable name
-taskkill /F /IM httpd.exe
+REM Stop Apache server on localhost using XAMPP
+"C:\xampp\xampp_stop.exe"
 
-echo Application stopped.
+REM Remove project files from htdocs
+rd /S /Q C:\xampp\htdocs\jenkins-php-selenium-test
+
+echo Application stopped and removed.
+pause
