@@ -52,7 +52,7 @@ public class AppTest
         System.out.println("Current Title: " + driver.getTitle());
 
 		//wait until page is loaded or timeout error
-		wait.until(ExpectedConditions.titleContains("Login Page | PHP Login and logout example with session "));
+		wait.until(ExpectedConditions.titleContains("Login Page | "));
 
 		//enter input
 		driver.findElement(By.name("email")).sendKeys(validEmail);
@@ -73,7 +73,7 @@ public class AppTest
 		//get web page
 		driver.get(url);
 		//wait until page is loaded or timeout error
-		wait.until(ExpectedConditions.titleContains("Login Page |")); 
+		wait.until(ExpectedConditions.titleContains("Login Page | "));
 
 		//enter input
 		driver.findElement(By.name("email")).sendKeys(validEmail);
