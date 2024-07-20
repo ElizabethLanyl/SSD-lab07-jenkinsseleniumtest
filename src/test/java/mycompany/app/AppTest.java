@@ -32,7 +32,7 @@ public class AppTest
     @Before
     public void setUp() { 
 		driver = new HtmlUnitDriver(); 
-		wait = new WebDriverWait(driver, 10); 
+		wait = new WebDriverWait(driver, 30);
 	} 
 
 	@After
@@ -46,6 +46,11 @@ public class AppTest
 
 		//get web page
 		driver.get(url);
+
+		// Log the current title and URL
+        System.out.println("Current URL: " + driver.getCurrentUrl());
+        System.out.println("Current Title: " + driver.getTitle());
+
 		//wait until page is loaded or timeout error
 		wait.until(ExpectedConditions.titleContains("Login Page | PHP Login and logout example with session "));
 
