@@ -28,5 +28,6 @@ pipeline {
         always {
             bat 'jenkins\\scripts\\kill.bat'
         }
+        }
     }
 }
