@@ -24,10 +24,10 @@ pipeline {
                 }
             }
         }
-         post {
+    }
+    post {
         always {
             bat 'jenkins\\scripts\\kill.bat'
-        }
         }
     }
 }
